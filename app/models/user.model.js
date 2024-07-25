@@ -1,7 +1,7 @@
 const sequel = require('sequelize');
 const mySequel = require('../utils/sequelize.util');
 
-const account = mySequel.define('account', {
+const user = mySequel.define('user', {
     id: {
         type: sequel.BIGINT(20),
         autoIncrement: true,
@@ -33,12 +33,12 @@ const account = mySequel.define('account', {
 }, {
     underscored: false,
     timestamps: false,
-    updatedAt: false,
-    createdAt: false,
+    // updatedAt: false,
+    // createdAt: false,
     includeDeleted: true,
     paranoid: true,
     freezeTableName: true,
     tableName: 'users',
 });
 
-module.exports = account;
+module.exports = user;

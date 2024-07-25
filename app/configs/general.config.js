@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 module.exports = {
     DBConnectors: {
         host: process.env.DB_HOST,
