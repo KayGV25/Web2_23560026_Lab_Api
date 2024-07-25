@@ -1,0 +1,26 @@
+{
+  "name": "lab_api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "web2_lab_23560026_api"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "method-override": "^3.0.0",
+    "mysql2": "^3.10.3",
+    "sequelize": "^6.37.3"
+  }
+}
