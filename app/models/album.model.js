@@ -1,40 +1,24 @@
 const sequel = require('sequelize');
 const mySequel = require('../utils/sequelize.util');
 
-const image = mySequel.define('image', {
+const album = mySequel.define('album', {
     id: {
         type: sequel.BIGINT(20),
         autoIncrement: true,
         allowNull: false,
         primaryKey: true,
     },
-    filename: {
-        type: sequel.STRING,
-        allowNull: false,
-    },
-    original_filename: {
-        type: sequel.STRING,
+    user_id: {
+        type: sequel.BIGINT(20),
         allowNull: false,
     },
     title: {
-        type: sequel.STRING,
+        type: sequel.STRING(255),
         allowNull: false,
     },
-    width: {
-        type: sequel.INTEGER,
-        allowNull: false,
-    },
-    height: {
-        type: sequel.INTEGER,
-        allowNull: false,
-    },
-    size: {
-        type: sequel.INTEGER,
-        allowNull: false,
-    },
-    mime_type: {
-        type: sequel.STRING(100),
-        allowNull: false,
+    description: {
+        type: sequel.TEXT,
+        allowNull: true,
     },
     created_at: {
         type: sequel.DATE,
@@ -54,7 +38,7 @@ const image = mySequel.define('image', {
     includeDeleted: true,
     paranoid: true,
     freezeTableName: true,
-    tableName: 'images',
+    tableName: 'albums',
 });
 
-module.exports = image;
+module.exports = album;

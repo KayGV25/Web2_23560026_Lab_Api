@@ -110,7 +110,7 @@ module.exports = {
                 else{
                     try {
                         user.create({username: username, password: password, email: email})
-                        return Rest.sendSuccessOne(res, {message: 'User created successfully'}, 200);
+                        return Rest.sendSuccessOne(res, 'User created successfully', 200);
                     } catch (error) {
                         return Rest.sendError(res, 1, 'Unable to create User', 400)
                     }
